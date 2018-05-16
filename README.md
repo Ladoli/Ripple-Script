@@ -22,3 +22,5 @@ Ripple-script takes an object for its properties
 **padding** determines padding wherein ripples will not start from with regard to the container edges.
 
 **defColor** determines default ripple color. Pass in strings that determine colors  css/html. Can use rgb or hexa or even strings that state the color such as 'gold'. Defaults to 'silver'.
+
+**delay** Delay between first animation and second animation. Defaults to 1 second.

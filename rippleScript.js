@@ -17,6 +17,7 @@ function rippleAnimation(container, properties){
   let rippleBlur = 10;
   let defColor = 'silver';
   let maxRipple = smaller;
+  let delay = 1;
 
   if(properties){
     if(properties.duration){
@@ -46,6 +47,9 @@ function rippleAnimation(container, properties){
     if(properties.maxRipple){
       maxRipple = properties.maxRipple;
     }
+    if(properties.delay){
+      delay = properties.delay;
+    }
   }
   let rippleDuration = parseInt(100/interval);
 
@@ -55,7 +59,7 @@ function rippleAnimation(container, properties){
   style +=  container + "{position: relative; text-align: center; display: flex; justify-content: center; align-items: center; overflow: hidden;} "
             + container + '::before,'+container+"::after {content: \'\'\; position: absolute; box-shadow: 0 0 " + rippleBlur + "px " + rippleSpread + "px " + defColor+ "; border-radius: 50%; opacity: 0;}"
             + container +"::before {animation: ripple1 " + duration[0] + "s infinite;"
-            + 'animation-delay: 1s; }'
+            + "animation-delay: "+ delay +"s; }"
             + container +'::after {right: ' + randomize() + '%;'
             + 'bottom: ' + randomize() +'%;'
             + "animation: ripple2 " + duration[1] + "s infinite; }"
