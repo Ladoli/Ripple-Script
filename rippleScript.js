@@ -1,4 +1,8 @@
 function rippleAnimation(container, properties){
+
+  if($('#rippleAnimationAppend')){
+    $('#rippleAnimationAppend').remove();
+  }
   let contHeight = $(container).height();
   let contWidth = $(container).width();
   let smaller;
@@ -68,7 +72,7 @@ function rippleAnimation(container, properties){
 
 
   // console.log(style)
-  $('<style>'+style+'</style>').appendTo('head');
+  $('<style id=\"rippleAnimationAppend\">'+style+'</style>').appendTo('head');
 
   function randomize(max, min){
     let minSize = min;
