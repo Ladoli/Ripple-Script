@@ -40,7 +40,7 @@ Ripple-script takes an object for its properties
 
 **delay** Delay between first animation and second animation. Defaults to 1 second.
 
-##Using Ripple-script on multiple containers with different animations
+## Using Ripple-script on multiple containers with different animations
 
 Simply add an identifier. As seen below:
 
