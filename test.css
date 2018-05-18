@@ -4,23 +4,10 @@
   background-color: black;
 }
 
-/* @keyframes ripple1 {
-	0% {height: 0px; width: 0px; opacity: 1;}
-	17% {left: -70vh; top: -90vh; height: 200vh; width: 200vh; opacity: 0;}
-	18.9%  {opacity: 0; height: 0px; width: 0px}
-	19% {left: 80vh; top: 30vh; height: 0px; width: 0px; opacity: 1;}
-	29% {left: 30vh; top: -20vh; height: 100vh; width: 100vh; opacity: 0;}
-	30.9% {opacity: 0; height: 0px; width: 0px}
-	31% {left: 60vh; top: 85vh; height: 0px; width: 0px; opacity: 1;}
-	42% {left: 0vh; top: 25vh; height: 120vh; width: 120vh; opacity: 0;}
-	43.9% {opacity: 0; height: 0px; width: 0px}
-	44% {left: 50vh; top: 60vh; height: 0px; width: 0px; opacity: 1;}
-	51% {left: 10vh; top: 20vh; height: 80vh; width: 80vh; opacity: 0;}
-	52.9% {opacity: 0; height: 0px; width: 0px}
-	53% {left: 60vh; top: 10vh; height: 0px; width: 0px; opacity: 1;}
-	72% {left: -35vh; top: -85vh; height: 190vh; width: 190vh; opacity: 0;}
-	73.9% {opacity: 0; height: 0px; width: 0px}
-	74% {left: 70vh; top: 30vh; height: 0px; width: 0px; opacity: 1;}
-	99% {left: -55vh; top: -105vh; height: 250vh; width: 250vh; opacity: 0;}
-	100% {opacity: 0;}
-} */
+
+#test2 {
+  margin-top: 200px;
+  width: 100%;
+  height: 300px;
+  background-color: grey;
+}

@@ -16,7 +16,7 @@ Simply add the following lines to your head tag.
 Then, to call RippleScript, simply use rippleAnimation(container, Properties(optional));
 
 
-## Ripple-Script Configuration
+## Ripple-Script Properties Configuration
 
 Ripple-script takes an object for its properties
 
@@ -39,3 +39,11 @@ Ripple-script takes an object for its properties
 **defColor** determines default ripple color. Pass in strings that determine colors  css/html. Can use rgb or hexa or even strings that state the color such as 'gold'. Defaults to 'silver'.
 
 **delay** Delay between first animation and second animation. Defaults to 1 second.
+
+##Using Ripple-script on multiple containers with different animations
+
+Simply add an identifier. As seen below:
+
+        rippleAnimation('#containerID', {});
+        rippleAnimation('#othercontainerID', {},uniqueIdentifier);
+        rippleAnimation('#othercontainerID2', {},'5235rrt4');

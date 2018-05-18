@@ -1,7 +1,7 @@
-function rippleAnimation(container, properties){
+function rippleAnimation(container, properties, identifier){
 
-  if($('#rippleAnimationAppend')){
-    $('#rippleAnimationAppend').remove();
+  if($('#rippleAnimationAppend'+identifier)){
+    $('#rippleAnimationAppend'+identifier).remove();
   }
   let contHeight = $(container).height();
   let contWidth = $(container).width();
@@ -62,17 +62,17 @@ function rippleAnimation(container, properties){
   let style ="";
   style +=  container + "{position: relative; text-align: center; display: flex; justify-content: center; align-items: center; overflow: hidden;} "
             + container + '::before,'+container+"::after {content: \'\'\; position: absolute; box-shadow: 0 0 " + rippleBlur + "px " + rippleSpread + "px " + defColor+ "; border-radius: 50%; opacity: 0;}"
-            + container +"::before {animation: ripple1 " + duration[0] + "s infinite;"
+            + container +"::before {animation: ripple"+identifier+"1 " + duration[0] + "s infinite;"
             + "animation-delay: "+ delay +"s; }"
             + container +'::after {right: ' + randomize() + '%;'
             + 'bottom: ' + randomize() +'%;'
-            + "animation: ripple2 " + duration[1] + "s infinite; }"
+            + "animation: ripple"+identifier+"2 " + duration[1] + "s infinite; }"
             + generateRipple({count: 1, randomColor: randomColors[0], max: maxRipple})
             + generateRipple({count: 2, randomColor: randomColors[1], max: maxRipple});
 
 
   // console.log(style)
-  $('<style id=\"rippleAnimationAppend\">'+style+'</style>').appendTo('head');
+  $('<style id=\"rippleAnimationAppend\"'+identifier+'>'+style+'</style>').appendTo('head');
 
   function randomize(max, min){
     let minSize = min;
@@ -94,7 +94,7 @@ function rippleAnimation(container, properties){
     let horizCurrent = 0;
     let rippleStart = "% {height: 0px; width: 0px; opacity: 1;} ";
     let resetRipple = "% {height: 0px; width: 0px; opacity: 0;} ";
-    let ripple ="@keyframes ripple"+rippleStats.count + " {";
+    let ripple ="@keyframes ripple"+identifier+rippleStats.count + " {";
     for(;rippleCompleted < 100;rippleCompleted+=rippleDuration){
       let color;
       if(rippleStats.randomColor){
