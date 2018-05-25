@@ -13,7 +13,9 @@ Simply add the following lines to your head tag.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://ladoli.github.io/JS/rippleScript.js"></script>
 
-Then, to call RippleScript, simply use rippleAnimation(container, Properties(optional));
+Then, to call RippleScript, simply use 
+
+        rippleAnimation(container, Properties(optional),uniqueIdentifier(optional));
 
 
 ## Ripple-Script Properties Configuration
@@ -40,7 +42,7 @@ Ripple-script takes an object for its properties
 
 **delay** Delay between first animation and second animation. Defaults to 1 second.
 
-##Using Ripple-script on multiple containers with different animations
+## Using Ripple-script on multiple containers with different animations
 
 Simply add an identifier. As seen below:
 
