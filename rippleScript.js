@@ -29,6 +29,9 @@ function rippleAnimation(container, properties, identifier){
     }
     if(properties.interval){
       interval = properties.interval;
+      if(interval > 100){
+        interval = 100;
+      }
     }
     if(properties.randomColors){
       randomColors = properties.randomColors;

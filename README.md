@@ -11,7 +11,7 @@ You can see a demo of Ripplescript, along with being able to play with its prope
 Simply add the following lines to your head tag.
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="JS/rippleScript.js"></script>
+        <script src="https://ladoli.github.io/JS/rippleScript.js"></script>
 
 Then, to call RippleScript, simply use rippleAnimation(container, Properties(optional));
 
