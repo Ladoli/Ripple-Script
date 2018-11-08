@@ -1,10 +1,14 @@
 function rippleAnimation(container, properties, identifier){
 
+
+
   if(document.getElementById('rippleAnimationAppend'+identifier)){
     document.getElementById('rippleAnimationAppend'+identifier).remove();
   }  
-  let contHeight = document.querySelector(container).clientHeight;
-  let contWidth = document.querySelector(container).clientWidth;
+
+  let rippleContainer = document.querySelector(container);
+  let contHeight = rippleContainer.clientHeight;
+  let contWidth = rippleContainer.clientWidth;
   let smaller;
   if(contHeight > contWidth){
     smaller = contWidth;
@@ -12,6 +16,7 @@ function rippleAnimation(container, properties, identifier){
   else {
     smaller = contHeight;
   }
+
   let duration = [21, 21];
   let interval = 10;
   let randomColors = [false,false];
@@ -87,10 +92,12 @@ function rippleAnimation(container, properties, identifier){
       minSize = 0;
     }
     if(!max){
-      return Math.floor((Math.random() * (100-minSize+1)) + minSize);
+      let generated = Math.floor((Math.random() * (100-minSize+1)) + minSize);
+      return generated;
     }
     else{
-      return Math.floor((Math.random() * (max-minSize+1)) + minSize);
+      let generated = Math.floor((Math.random() * (max-minSize+1)) + minSize);;
+      return generated;
     }
   }
 
@@ -98,7 +105,7 @@ function rippleAnimation(container, properties, identifier){
     let rippleCompleted = 0;
     let vertCurrent = 0;
     let horizCurrent = 0;
-    let rippleStart = "% {height: 0px; width: 0px; opacity: 1;} ";
+    // let rippleStart = "% {height: 0px; width: 0px; opacity: 1;} ";
     let resetRipple = "% {height: 0px; width: 0px; opacity: 0;} ";
     let ripple ="@keyframes ripple"+identifier+rippleStats.count + " {";
     let rippleMax = parseInt(100/rippleDuration) * rippleDuration;

@@ -16,7 +16,7 @@ Then, to call RippleScript, simply use
 
         rippleAnimation(container, Properties(optional),uniqueIdentifier(optional));
 
-To call it upon DOM load without jQuery's $( document ).ready(), you can use
+To call it upon DOM load without jQuery's $( document ).ready(), you can add this code to the end of your body tag
 
         document.addEventListener('DOMContentLoaded', function(){ 
                 rippleAnimation(container, 
