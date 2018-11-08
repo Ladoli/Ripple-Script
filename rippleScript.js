@@ -61,7 +61,6 @@ function rippleAnimation(container, properties, identifier){
   let rippleDuration = parseInt(100/interval);
 
 
-
   let style ="";
   style +=  container + "{position: relative; text-align: center; display: flex; justify-content: center; align-items: center; overflow: hidden;} "
             + container + '::before,'+container+"::after {content: \'\'\; position: absolute; box-shadow: 0 0 " + rippleBlur + "px " + rippleSpread + "px " + defColor+ "; border-radius: 50%; opacity: 0;}"
@@ -74,7 +73,6 @@ function rippleAnimation(container, properties, identifier){
             + generateRipple({count: 2, randomColor: randomColors[1], max: maxRipple});
 
 
-  // console.log(style)
   $('<style id=\"rippleAnimationAppend\"'+identifier+'>'+style+'</style>').appendTo('head');
 
   function randomize(max, min){
@@ -98,7 +96,9 @@ function rippleAnimation(container, properties, identifier){
     let rippleStart = "% {height: 0px; width: 0px; opacity: 1;} ";
     let resetRipple = "% {height: 0px; width: 0px; opacity: 0;} ";
     let ripple ="@keyframes ripple"+identifier+rippleStats.count + " {";
-    for(;rippleCompleted < 100;rippleCompleted+=rippleDuration){
+    let rippleMax = parseInt(100/rippleDuration) * rippleDuration;
+
+    for(;rippleCompleted < rippleMax;rippleCompleted+=rippleDuration){
       let color;
       if(rippleStats.randomColor){
         color = getRandomColor();
@@ -147,7 +147,7 @@ function rippleAnimation(container, properties, identifier){
     function endRipple(endRippleStats) {
       let vert;
       let horiz;
-      let rippleEnd = parseInt(endRippleStats.start) + (rippleDuration*.9);
+      let rippleEnd = parseInt(endRippleStats.start) + (rippleDuration*.98);
       let rippleSize = randomize(endRippleStats.max, minRipple);
       if(endRippleStats.number == 1){
         vert = "top";

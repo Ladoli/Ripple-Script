@@ -22,7 +22,7 @@ Then, to call RippleScript, simply use
 
 Ripple-script takes an object for its properties
 
-**duration** is an array of two numbers that determine the duration of each ripple group loop. Defaults to 21 seconds each
+**duration** is an array of two numbers that determine the duration of each ripple group loop. Defaults to 21 seconds each. **Final duration may change slightly based on intervals used**
 
 **interval** determines how many ripples per ripple loop before restarting the loop. An interval of 10 ripples means that there will be a total of 20 ripples if each animation runs once. Defaults to 10.
 
