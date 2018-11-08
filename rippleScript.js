@@ -1,4 +1,4 @@
-export default rippleAnimation = function (container, properties, identifier){
+export default function (container, properties, identifier){
 
   if(document.getElementById('rippleAnimationAppend'+identifier)){
     document.getElementById('rippleAnimationAppend'+identifier).remove();
