@@ -8,11 +8,15 @@ You can see a demo of Ripplescript, along with being able to play with its prope
 
 ## Adding Ripple-Script to your project
 
-Simply add the following lines to your head tag.
+You can install Ripple-Script by going:
 
-        <script src="https://ladoli.github.io/JS/rippleScript.js"></script>
+        npm install --save ripplescript
 
-Then, to call RippleScript, simply use 
+Then, to call RippleScript with es6 syntax, simply import it
+
+        import rippleAnimation from 'ripplescript';
+
+Feel free to call it using:
 
         rippleAnimation(container, Properties(optional),uniqueIdentifier(optional));
 

@@ -1,0 +1,19 @@
+{
+  "name": "ripplescript",
+  "version": "1.0.1",
+  "description": "A script to create random ripple effects on a target container",
+  "main": "rippleScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ladoli/Ripple-Script.git"
+  },
+  "author": "villadolidangeloryan@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ladoli/Ripple-Script/issues"
+  },
+  "homepage": "https://github.com/Ladoli/Ripple-Script#readme"
+}
