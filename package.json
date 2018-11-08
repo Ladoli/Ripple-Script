@@ -1,6 +1,6 @@
 {
   "name": "ripplescript",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A script to create random ripple effects on a target container",
   "main": "rippleScript.js",
   "scripts": {

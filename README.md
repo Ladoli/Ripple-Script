@@ -4,7 +4,9 @@ A script to create random ripple effects on a target container
 
 ## Demo
 
-You can see a demo of Ripplescript, along with being able to play with its properties, here: https://ladoli.github.io/rippleScript.html
+An example of how I myself used Ripplescript: https://react-ladoli.netlify.com/
+
+You can see a demo of Ripplescript, along with being able to play with its properties, here: https://react-ladoli.netlify.com/RippleScript
 
 ## Adding Ripple-Script to your project
 
