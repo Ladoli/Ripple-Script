@@ -10,12 +10,19 @@ You can see a demo of Ripplescript, along with being able to play with its prope
 
 Simply add the following lines to your head tag.
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://ladoli.github.io/JS/rippleScript.js"></script>
 
 Then, to call RippleScript, simply use 
 
         rippleAnimation(container, Properties(optional),uniqueIdentifier(optional));
+
+To call it upon DOM load without jQuery's $( document ).ready(), you can use
+
+        document.addEventListener('DOMContentLoaded', function(){ 
+                rippleAnimation(container, 
+                Properties(optional),
+                uniqueIdentifier(optional))
+        }, false);
 
 
 ## Ripple-Script Properties Configuration

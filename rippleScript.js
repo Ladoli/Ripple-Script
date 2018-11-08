@@ -1,10 +1,10 @@
 function rippleAnimation(container, properties, identifier){
 
-  if($('#rippleAnimationAppend'+identifier)){
-    $('#rippleAnimationAppend'+identifier).remove();
-  }
-  let contHeight = $(container).height();
-  let contWidth = $(container).width();
+  if(document.getElementById('rippleAnimationAppend'+identifier)){
+    document.getElementById('rippleAnimationAppend'+identifier).remove();
+  }  
+  let contHeight = document.querySelector(container).clientHeight;
+  let contWidth = document.querySelector(container).clientWidth;
   let smaller;
   if(contHeight > contWidth){
     smaller = contWidth;
@@ -60,7 +60,6 @@ function rippleAnimation(container, properties, identifier){
   }
   let rippleDuration = parseInt(100/interval);
 
-
   let style ="";
   style +=  container + "{position: relative; text-align: center; display: flex; justify-content: center; align-items: center; overflow: hidden;} "
             + container + '::before,'+container+"::after {content: \'\'\; position: absolute; box-shadow: 0 0 " + rippleBlur + "px " + rippleSpread + "px " + defColor+ "; border-radius: 50%; opacity: 0;}"
@@ -72,8 +71,14 @@ function rippleAnimation(container, properties, identifier){
             + generateRipple({count: 1, randomColor: randomColors[0], max: maxRipple})
             + generateRipple({count: 2, randomColor: randomColors[1], max: maxRipple});
 
-
-  $('<style id=\"rippleAnimationAppend\"'+identifier+'>'+style+'</style>').appendTo('head');
+    let implementedStyle = document.createElement('style');
+    implementedStyle.setAttribute('type','text/css');
+    if(implementedStyle.styleSheet){
+      implementedStyle.styleSheet.cssText = style;
+    }else{
+      implementedStyle.appendChild(document.createTextNode(style));
+    }
+    document.head.appendChild(implementedStyle);
 
   function randomize(max, min){
     let minSize = min;
