@@ -20,16 +20,25 @@ Then, to call RippleScript with es6 syntax, simply import it
 
 Feel free to call it using:
 
-        rippleAnimation(container, Properties(optional),uniqueIdentifier(optional));
+        rippleAnimation(containerQuery, Properties(optional),uniqueIdentifier(optional));
+
+        rippleAnimation('#containerID', Properties(optional),uniqueIdentifier(optional));
 
 To call it upon DOM load without jQuery's $( document ).ready(), you can add this code to the end of your body tag
 
         document.addEventListener('DOMContentLoaded', function(){ 
-                rippleAnimation(container, 
+                rippleAnimation(containerQuery, 
                 Properties(optional),
                 uniqueIdentifier(optional))
         }, false);
 
+In React it is even easier! Just stick it in ComponentDidMount like so
+
+        componentDidMount() {
+                rippleAnimation(containerQuery, 
+                Properties(optional),
+                uniqueIdentifier(optional))
+        }
 
 ## Ripple-Script Properties Configuration
 
